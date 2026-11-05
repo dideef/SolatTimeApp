@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SolatTime - Activity Reminders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+    <div class="top-section">
+        <img src="logo.png" alt="Solat Time logo" class="logo">
+        <h2>Solat Time</h2>
+
+        <!-- Navigation Menu -->
+        <div class="nav">
+            <a href="index.html">Prayer Times & Timer</a> |
+            <a href="reminders.html" class="active">Activity Reminders</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h3>Activity Reminders</h3>
+        
+        <!-- Create / Update Form -->
+        <div class="form-group">
+            <input type="hidden" id="editIndex" value="-1">
+            <label for="activityInput">Activity Name:</label>
+            <input type="text" id="activityInput" placeholder="e.g., Read Surah Al-Kahf">
+            
+            <label for="timeInput">Time:</label>
+            <input type="time" id="timeInput">
+            
+            <button id="saveBtn">Add Reminder</button>
+            <button id="cancelBtn" style="display:none; background-color: #e74c3c;">Cancel</button>
+        </div>
+
+        <p id="crudMsg" style="color: green;"></p>
+
+        <!-- Read: Display List of Reminders -->
+        <h3>Saved Reminders</h3>
+        <ul id="reminderList">
+            <!-- Dynamic items will appear here -->
+        </ul>
+    </div>
+    </div>
+    <script src="reminders.js"></script>
+</body>
+</html>
